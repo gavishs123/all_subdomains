@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Subdomains List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+
+        h1 {
+            text-align: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            cursor: pointer;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li:hover {
+            background-color: #f2f2f2;
+        }
+
+        li::before {
+            content: "\2022";
+            color: #999;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        li::marker {
+            display: none;
+        }
+
+        .hidden-searchgpt {
+            display: none;
+        }
+
+        .hidden-searchgpt-payload {
+            display: none;
+        }
+
+        .hidden-treeofthoughts {
+            display: none;
+        }
+        .hidden-treeofthoughts-payload {
+            display: none;
+        }
+        
+        .hidden-babyagi {
+            display: none;
+        }
+
+        .hidden-babyagi-payload {
+            display: none;
+        }
+        .hidden-babyagi-socket {
+            display: none;
+        }
+
+        .hidden-stablestudio {
+            display: none;
+        }
+
+        .hidden-agentgpt {
+            display: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .code-box {
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          }
+          
+          pre {
+            margin: 0;
+          }
+          
+          code {
+            display: block;
+            padding: 10px;
+          }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var searchGptLink = document.getElementById("searchgpt-link");
+            var searchGptToggle = document.getElementById("searchgpt-toggle");
+
+            searchGptToggle.addEventListener("click", function () {
+                searchGptLink.classList.toggle("hidden-searchgpt");
+            });
+
+            var searchGptpayloadLink = document.getElementById("searchgpt-payload-link");
+            var searchGptpayloadToggle = document.getElementById("searchgpt-payload-toggle");
+
+            searchGptpayloadToggle.addEventListener("click", function () {
+                searchGptpayloadLink.classList.toggle("hidden-searchgpt-payload");
+            });
+
+            var treeofthoughtsLink = document.getElementById("treeofthoughts-link");
+            var treeofthoughtsToggle = document.getElementById("treeofthoughts-toggle");
+
+            treeofthoughtsToggle.addEventListener("click", function () {
+                treeofthoughtsLink.classList.toggle("hidden-treeofthoughts");
+            });
+            
+            var treeofthoughtspayloadLink = document.getElementById("treeofthoughts-payload-link");
+            var treeofthoughtspayloadToggle = document.getElementById("treeofthoughts-payload-toggle");
+
+            treeofthoughtspayloadToggle.addEventListener("click", function () {
+                treeofthoughtspayloadLink.classList.toggle("hidden-treeofthoughts-payload");
+            });
+            
+            var babyagiLink = document.getElementById("babyagi-link");
+            var babyagiToggle = document.getElementById("babyagi-toggle");
+
+            babyagiToggle.addEventListener("click", function () {
+                babyagiLink.classList.toggle("hidden-babyagi");
+            });
+
+            var babyagipayloadLink = document.getElementById("babyagi-payload-link");
+            var babyagipayloadToggle = document.getElementById("babyagi-payload-toggle");
+
+            babyagipayloadToggle.addEventListener("click", function () {
+                babyagipayloadLink.classList.toggle("hidden-babyagi-payload");
+            });
+            var babyagisocketLink = document.getElementById("babyagi-socket-link");
+            var babyagisocketToggle = document.getElementById("babyagi-socket-toggle");
+
+            babyagisocketToggle.addEventListener("click", function () {
+                babyagisocketLink.classList.toggle("hidden-babyagi-socket");
+            });
+
+            var stablestudioLink = document.getElementById("stablestudio-link");
+            var stablestudioToggle = document.getElementById("stablestudio-toggle");
+
+            stablestudioToggle.addEventListener("click", function () {
+                stablestudioLink.classList.toggle("hidden-stablestudio");
+            });
+
+            var agentgptLink = document.getElementById("agentgpt-link");
+            var agentgptToggle = document.getElementById("agentgpt-toggle");
+
+            agentgptToggle.addEventListener("click", function () {
+                agentgptLink.classList.toggle("hidden-agentgpt");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <h1>Subdomains Lists</h1>
+    <div class="container">
+        <ul id="subdomain-list">
+            <li id="searchgpt-toggle">SearchGPT</li>
+            <ul id="searchgpt-link" class="hidden-searchgpt">
+                <li>
+                    <a href="https://searchgpt-og.ai42.app">searchgpt-og.ai42.app</a>
+                </li>
+                <li>
+                    <a href="https://searchgpt-api.ai42.app/generate">searchgpt-api.ai42.app</a>
+                </li>
+                <li id="searchgpt-payload-toggle">PayLoad</li>
+                <ul id="searchgpt-payload-link" class="hidden-searchgpt-payload">
+                    <div class="code-box">
+                        <pre>
+                          <code>
+Method [POST]
+payload : {
+    "request_id":"2563147jdf89",
+    "q":"tell me about your self",
+    "is_use_source":"True",
+    "llm_service_provider":"openai",
+    "llm_model":"gpt-3.5-turbo",
+    "language":"en-US"
+}
+                          </code>
+                        </pre>
+                      </div>
+                </ul>
+            </ul>
+
+            <!-- TreeOfThoughts -->
+            <li id="treeofthoughts-toggle">Tree Of Thoughts</li>
+            <ul id="treeofthoughts-link" class="hidden-treeofthoughts">
+                <li>
+                    <a href=" https://treeofthoughts-api.ai42.app/api/generate/">treeofthoughts-api.ai42.app/api/generate/</a>
+                </li>
+                <li id="treeofthoughts-payload-toggle">PayLoad</li>
+                <ul id="treeofthoughts-payload-link" class="hidden-treeofthoughts-payload">
+                    <li>
+                        <div class="code-box">
+                            <pre>
+                              <code>
+Payload : {
+    "generated_prompts":"what is javascript"
+}
+                              </code>
+                            </pre>
+                          </div>
+                    </li>
+                </ul>
+            </ul>
+
+            <!-- Baby AGI -->
+            <li id="babyagi-toggle">Baby AGI</li>
+            <ul id="babyagi-link" class="hidden-babyagi">
+                <li>
+                    <a href="https://babyagi-api.ai42.app/api/generate/">babyagi-api.ai42.app/api/generate/</a>
+                </li>
+                <li id="babyagi-payload-toggle">PayLoad</li>
+                <ul id="babyagi-payload-link" class="hidden-babyagi-payload">
+                    <li>
+                        <div class="code-box">
+                            <pre>
+                              <code>
+Payload : {
+    "prompt":"Extraction 2 all cast list"
+}                         </code>
+                            </pre>
+                          </div>
+                    </li>
+                </ul>
+                <!--Socket-->
+                <li id="babyagi-socket-toggle">Socket</li>
+                <ul id="babyagi-socket-link" class="hidden-babyagi-socket">
+                    <li>
+                        <div class="code-box">
+                            <pre>
+                              <code>
+I have created a channel with the name of the searched text
+so from the front end we have to remove the space and extra characters 
+
+for example :
+text = "how to play valorant"
+ws://136.243.50.33:8004/ws/socket-server/howtoplayvalorant/
+
+after that call the api 
+http://136.243.50.33:8004/api/generate/
+payload : 
+{
+    "prompt":"how to play valorant"
+}
+Screenshot : https://prnt.sc/iPmlJ4wGN16i , https://prnt.sc/_TeLM8fY21zj                     </code>
+                            </pre>
+                          </div>
+                    </li>
+                </ul>
+
+            </ul>
+            <li id="stablestudio-toggle">Stable Studio</li>
+            <ul id="stablestudio-link" class="hidden-stablestudio">
+                <li>
+                    <a href="https://stablestudio.ai42.app/">stablestudio.ai42.app</a>
+                </li>
+            </ul>
+
+            <li id="agentgpt-toggle">AgentGPT</li>
+            <ul id="agentgpt-link" class="hidden-agentgpt">
+                <li>
+                    <a href="http://136.243.50.33:3006/">agentgpt-og.ai42.app</a>
+                </li>
+            </ul>
+
+            
+        </ul>
+    </div>
+</body>
+
+</html>
