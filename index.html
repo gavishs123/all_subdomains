@@ -94,6 +94,21 @@
             display: none;
         }
 
+        .hidden-superagi {
+            display: none;
+        }
+
+        .hidden-superagi-create-agent {
+            display: none;
+        }
+        .hidden-get-agent {
+            display: none;
+        }
+
+        .hidden-get-agent-execution {
+            display: none;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -178,6 +193,34 @@
 
             agentgptToggle.addEventListener("click", function () {
                 agentgptLink.classList.toggle("hidden-agentgpt");
+            });
+
+            var superagiLink = document.getElementById("superagi-link");
+            var superagiToggle = document.getElementById("superagi-toggle");
+
+            superagiToggle.addEventListener("click", function () {
+                superagiLink.classList.toggle("hidden-superagi");
+            });
+
+            var superagi_create_agentLink = document.getElementById("superagi-create-agent-link");
+            var superagi_create_agentToggle = document.getElementById("superagi-create-agent-toggle");
+
+            superagi_create_agentToggle.addEventListener("click", function () {
+                superagi_create_agentLink.classList.toggle("hidden-superagi-create-agent");
+            });
+
+            var superagi_get_agentLink = document.getElementById("get-agent-link");
+            var superagi_get_agentToggle = document.getElementById("get-agent-toggle");
+
+            superagi_get_agentToggle.addEventListener("click", function () {
+                superagi_get_agentLink.classList.toggle("hidden-get-agent");
+            });
+
+            var superagi_get_agent_execution_Link = document.getElementById("get-agent-execution-link");
+            var superagi_get_agent_execution_Toggle = document.getElementById("get-agent-execution-toggle");
+
+            superagi_get_agent_execution_Toggle.addEventListener("click", function () {
+                superagi_get_agent_execution_Link.classList.toggle("hidden-get-agent-execution");
             });
         });
     </script>
@@ -270,11 +313,11 @@ for example :
 text = "how to play valorant"
 ws://136.243.50.33:8004/ws/socket-server/howtoplayvalorant/
 
-after that call the api 
+after that call the api
 http://136.243.50.33:8004/api/generate/
-payload : 
+payload :
 {
-    "prompt":"how to play valorant"
+     "prompt":"how to play valorant"
 }
 Screenshot : https://prnt.sc/iPmlJ4wGN16i , https://prnt.sc/_TeLM8fY21zj                     </code>
                             </pre>
@@ -297,6 +340,63 @@ Screenshot : https://prnt.sc/iPmlJ4wGN16i , https://prnt.sc/_TeLM8fY21zj        
                 </li>
             </ul>
 
+            <!-- Super AGI -->
+            <li id="superagi-toggle">Super AGI</li>
+            <ul id="superagi-link" class="hidden-superagi">
+                <li id="superagi-create-agent-toggle">Create Agent</li>
+                    <ul id="superagi-create-agent-link" class="hidden-superagi-create-agent">
+                        <li>
+                            <a href="http://136.243.50.33:8003/agents/create">http://136.243.50.33:8003/agents/create</a>
+                        </li>
+                        <li>
+                            PayLoad
+                            <div class="code-box">
+                                <pre>
+                                  <code>
+Method [POST]
+{
+    "name": "test1",
+    "project_id": 1,
+    "description": "description 2",
+    "goal": [
+        "give me deatils about avenger"
+    ],
+    "agent_type": "Don't Maintain Task Queue",
+    "constraints": [
+        "If you are unsure how you previously did something or want to recall past events, thinking about similar events will help you remember.",
+        "Ensure the command and args are as per current plan and reasoning",
+        "Exclusively use the commands listed in double quotes e.g. \"command name\""
+    ],
+    "tools": [
+        8,
+        9,
+        10
+    ],
+    "exit": "No exit criterion",
+    "iteration_interval": 500,
+    "model": "gpt-3.5-turbo",
+    "max_iterations": 25,
+    "permission_type": "God Mode",
+    "LTM_DB": "Pinecone",
+    "memory_window": "10"
+}                     </code>
+                                </pre>
+                              </div>
+                        </li>
+                    </ul>  
+                    <li id="get-agent-toggle">Get Agent Details</li>
+                    <ul id="get-agent-link" class="hidden-get-agent">
+                        <li>
+                            <a href="http://136.243.50.33:8003/agents/get/details/">http://136.243.50.33:8003/agents/get/details/(int)</a>
+                        </li>   
+                     
+                    
+            </ul>
+            <li id="get-agent-execution-toggle">Get Agent Execution</li>
+                    <ul id="get-agent-execution-link" class="hidden-get-agent-execution">
+                        <li>
+                            <a href="http://136.243.50.33:8003/agents/get/details/">http://136.243.50.33:8003/agents/get/details/(int)</a>
+                        </li>  
             
         </ul>
     </div>
